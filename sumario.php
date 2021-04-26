@@ -13,7 +13,7 @@ if ($lista == 0) {
 		$listaC = $x->listaConteudo($lista[$i],$materia);
 		array_push($texto, "<ul class='itemSecun'>");
 		for ($c=0; $c < count($listaC); $c++) { 
-			array_push($texto,"<li><a href='#'>".$listaC[$c]."</a></li>");
+			array_push($texto,"<li><a href='#' onclick='buscaContMateria()' class='sub-item'>".$listaC[$c]."</a></li>");
 		}
 		array_push($texto,"</li></ul>");
 	}

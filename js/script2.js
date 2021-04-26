@@ -51,29 +51,29 @@ $(document).ready(function(){
 					$('.listaPrincipal').remove();
 					$('.submenu').append(data);
 					listaEfeito()
-					buscaContMateria()
 				}
+				buscaContMateria()
 			}
 		})
 	})
 })
-  function buscaContMateria(){
-  $(document).ready(function(){
-    $('.sub-item').click(function(){
-      var conteudo = $(this).text()
-      console.log(conteudo)
-      $.ajax({
-        url:"conteudoBusca.php",
-        type: "POST",
-        data:{
-          conteudo: conteudo
-        },
-        success: function(response) {
-          console.log(response)
-          $('section').children().remove();
-          $('section').append(response);
-        }
-      })
-    })
-  })
+function buscaContMateria(){
+	$(document).ready(function(){
+		$('.sub-item').click(function(){
+			var conteudo = $(this).text()
+			console.log(conteudo)
+			$.ajax({
+				url:"conteudoBusca.php",
+				type: "POST",
+				data:{
+					conteudo: conteudo
+				},
+				success: function(response) {
+					console.log(response)
+					$('section').children().remove();
+					$('section').append(response);
+				}
+			})
+		})
+	})
 }

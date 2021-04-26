@@ -22,7 +22,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <!-- JavaScript -->
-  <script src="js/script.js"></script>
+  <script src="js/script2.js"></script>
   <title>Education</title>
 </head>
 <body>
@@ -80,7 +80,7 @@
             <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas Vestibular</a></li>
             <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas UFMG</a></li>
           </ul>
-        </li>
+        </li> 
         <li class="nav-item">
           <a class="nav-link" href="#">Pesquisas</a>
         </li>
@@ -123,7 +123,7 @@ for ($i=0; $i < count($lista); $i++) {
  $listaC = $x->listaConteudo($lista[$i],"matematica");
  echo "<ul class='itemSecun'>";
  for ($c=0; $c < count($listaC); $c++) { 
-  echo "<li><a href='#' class='sub-item'>".$listaC[$c]."</a></li>";
+  echo "<li><a href='#' onclick='buscaContMateria()' class='sub-item'>".$listaC[$c]."</a></li>";
 }
 echo "</li></ul>";
 }
@@ -151,6 +151,7 @@ echo "</ul>";
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   </p>
+  
 </section>
 <!-- ---------------------------Trabalahndo no rodape do site------------------------------------ -->
 <footer class="footer">
@@ -163,27 +164,11 @@ echo "</ul>";
   </ul>
 </footer>
 <!-- ---------------------Script no fim do site para inclusao do bootstrap---------------------- -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<script>
-  $(document).ready(function(){
-    $('.sub-item').click(function(){
-      var conteudo = $(this).text()
-      //console.log(conteudo)
-      $.ajax({
-        url:"conteudoBusca.php",
-        type: "POST",
-        data:{
-          conteudo: conteudo
-        },
-         success: function(response) {
-          //console.log(response)
-          $('section').children().remove();
-          $('section').append(response);
-        }
-      })
-    })
-  })
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
 </script>
 <!-- -------------------------------------------------------------------------------------------- -->
+<script>
+buscaContMateria()
+</script>
 </body>
 </html>

@@ -394,8 +394,8 @@
                     	var ano = document.getElementById("tAno").value;
                     	var conteudo = document.getElementById("tConteudo").value;
                     	var titulo = document.getElementById("tTitulo").value;
-                    	var descricao = document.getElementById("tDescricao").value;
-                    	var texto = document.getElementById("tTexto").value;
+                    	var descricao = toString(document.getElementById("tDescricao").value);
+                    	var texto = toString(document.getElementById("tTexto").value);
 
                     	$.ajax({
                     		url:"insertTabela.php",

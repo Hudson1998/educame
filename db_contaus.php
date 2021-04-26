@@ -191,8 +191,10 @@ class db_contaus{
 				$texto = $row["texto"];
 				$cont = $row["conteudo"];
 				array_push($contentHome,
-					"<h1>".$cont."</h1><hr><h3>".$titulo."</h3><p>".$descricao
-					."</p><p>".$texto."</p>");
+					"<h1>".$cont."</h1><hr>
+					<h3>".$titulo."</h3>
+					<p>".$descricao."</p>
+					<p>".$texto."</p>");
 			}
 		} else {
 			echo "0 results";
