@@ -91,123 +91,6 @@
 <div class="nav-rigth">
 </div>
 </nav>
-
-
-
-
-
-<style>
-  #navegacao{
-    position: fixed;
-    background: #1e1e1e;
-    display: block;
-    z-index: 5;
-    width: 100%;
-    height: 60px;
-  }
-  .menu{
-    position: relative;
-    left: 0px;
-    top: 50%;
-    transform: translate(0%,-50%);
-    color: #EDEDED;
-    font-size: 45px;
-    display: none;
-  }
-  .logoTipo{
-    position: absolute;
-    top: 50%;
-    transform: translate(0%,-50%);
-    text-decoration: none;
-    font-size: 20px;
-    padding-left: 20px;
-  }
-  .logoE{
-    color: #6B68E2;
-    border:2px solid #6B68E2;
-    position: relative;
-    padding:1px 12px 3px 12px;
-    margin-right: 7px;
-  }
-  .nomePrinci{
-    letter-spacing: 2px;
-    color: #fff;
-    font-family: 'Poppins';
-  }
-  .nav-rigth{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translate(0%,-50%);
-    list-style: none;
-  }
-  .nav-rigth li{
-    display: inline-block;
-    width: 60px
-  }
-  .nav-rigth .material-icons-outlined{
-    color: #EDEDED;
-    font-size: 25px;
-    margin-left: 27px;
-    width: 0px
-  }
-  .seta{
-    position: relative;
-    right: 10px;
-    width: 10px;
-    margin-left: 0px
-  }
-  ul li:hover .material-icons-outlined{
-    cursor: pointer;
-    color: #A6A6A6;
-  }
-  /* editando o submenu superior */
-  #navegacao ul ul{
-    display: block;
-    position: absolute;
-    margin-top: 14px;
-    width: 300px;
-    right: 20px;
-    border: none;
-    display: none;
-  }
-  #navegacao ul ul li{
-    position: relative;
-    display: block;
-    width: 100%;   
-    color: #fff;
-    text-align: left;
-    border: none;
-    margin: 0;
-    background: #D3D3D3;
-    box-sizing: border-box;
-  }
-  #navegacao ul ul li a{
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 40px;
-    text-decoration: none;
-    padding-top: 5px;
-    padding-left: 20px;
-    border: none;
-    margin: 0;
-    background: #D3D3D3;
-    color: #2C2C2C;
-    font-family: 'Poppins'
-  }
-  #navegacao ul ul li:hover a{
-    background: #4040FC;
-    color: #fff;
-  }
-  #navegacao ul li a hr{
-    color: black;
-    margin-right: 20px;
-  }
-  section h1, h2{
-    text-transform: capitalize;
-  }
-</style>
 <!-- Navegação lateral do site -->
 <div class="submenu">
   <!-- <div class="perfil" style="
@@ -226,7 +109,6 @@
   <i class="fa fa-caret-down" style="font-size: 40px;"></i>
   <i id="icone" class="fa fa-gear" style="font-size: 25px;"></i>
 </div> -->
-
 <?php
 
 include('db_contaus.php');
