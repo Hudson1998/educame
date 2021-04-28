@@ -1,5 +1,7 @@
 @charset "utf8";
-
+body{
+    background-color: #E4E4E4
+}
 #navegacao{
     position: fixed;
     display: block;
@@ -22,7 +24,7 @@
     right: 70px;
 }
 
-/*----------------------------------------------*/
+/* Corpo da pagina */
 section{
     margin-top: 64px;
     display: inline-block;
@@ -32,8 +34,24 @@ section{
     text-align: justify;
     padding-bottom: 500px;
 }
-p{
-    text-indent: 20px;
+section p{
+    font-size: 20px;
+}
+section h1, h2{
+    text-transform: capitalize;
+}
+.imgTopo{
+  height: 300px;
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin: 0px 0px 20px 20px;
+}
+.imgEsquerda{
+   position: relative;
+   display: inline-block;
+   float: left;
+   margin: 0px 0px 20px 0px;
 }
 /*--------------------------------------------------*/
 .perfil{
@@ -112,11 +130,11 @@ p{
     box-sizing: border-box;
     padding-left: 14px;
     border-left: 2px solid rgba(0,0,0,.0);
-   
+
 }
 .itemPrinci{
     border-top: 1px solid rgba(0,0,0,.02);
-     border-bottom: 1px solid rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(0,0,0,.2);
 }
 .submenu ul ul li a{
     padding-left: 40px;
@@ -174,7 +192,7 @@ footer{
 .submenu::-webkit-scrollbar-track {
   background: rgba(0,0,0,.3);
 }
- 
+
 /* Handle */
 .submenu::-webkit-scrollbar-thumb {
   background: #2e2e2e; 

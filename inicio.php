@@ -151,8 +151,32 @@ echo "</ul>";
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   </p>
-  
+
 </section>
+ <style>
+  body{
+    background-color: #E4E4E4
+  }
+  section p{
+    font-size: 20px;
+  }
+  section h1, h2{
+    text-transform: capitalize;
+  }
+    .imgTopo{
+      height: 300px;
+     position: relative;
+     display: inline-block;
+     float: right;
+     margin: 0px 0px 20px 20px;
+   }
+   .imgEsquerda{
+     position: relative;
+     display: inline-block;
+     float: left;
+     margin: 0px 20px 20px 0px;
+   }
+ </style>
 <!-- ---------------------------Trabalahndo no rodape do site------------------------------------ -->
 <footer class="footer">
   <ul>
@@ -168,7 +192,7 @@ echo "</ul>";
 </script>
 <!-- -------------------------------------------------------------------------------------------- -->
 <script>
-buscaContMateria()
+  buscaContMateria()
 </script>
 </body>
 </html>
