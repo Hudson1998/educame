@@ -77,3 +77,17 @@ $(document).ready(function(){
     })
   })
 }
+  function abreMenu(){
+    $(document).ready(function(){
+      $('.ensinoMedio').click(function(){
+        var resposta = $('#navegacao ul ul').css('display');
+        //console.log(resposta)
+        if (resposta != "block") {
+          $('#navegacao ul ul').css('display','block')
+        }else{
+          $('#navegacao ul ul').css('display','none')
+        }
+      })
+    })
+  }
+  abreMenu()

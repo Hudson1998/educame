@@ -10,6 +10,10 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <!-- font -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
@@ -26,75 +30,187 @@
   <title>Education</title>
 </head>
 <body>
-  <!-- -----------------------------Desenvolvimento Nav--------------------------------------------- -->
-  <nav id="navegacao" class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navDireita">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Inicial</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle=    "dropdown" aria-expanded="false">
-              Ensino Médio
-            </a>
-            <ul class="dropdown-menu ensinoMedio" aria-labelledby="navbarDropdown">
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Matematica</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Português</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Historia</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Geografia</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Filosofia</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Química</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Física</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Sociologia</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Artes</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Inglês</a></li>
-             <li class="materiaSelect"><a class="dropdown-item item" href="#">Ed.Física</a></li>
-             <li class="materiaSelect"><hr class="dropdown-divider"></li>
-             <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas Enem</a></li>
-             <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas USP</a></li>
-             <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas Vestibular</a></li>
-             <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas UFMG</a></li>
-           </ul>
-         </li>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle=    "dropdown" aria-expanded="false">
-            Ensino Fundamental
-          </a>
-          <ul class="dropdown-menu ensinoFundamental" aria-labelledby="navbarDropdown">
-            <li class="materiaSelect"><a class="dropdown-item item" href="#">Matematica</a></li>
-            <li class="materiaSelect"><a class="dropdown-item item" href="#">português</a></li>
-            <li class="materiaSelect"><a class="dropdown-item item" href="#">Historia</a></li>
-            <li class="materiaSelect"><a class="dropdown-item item" href="#">Geografia</a></li>
-            <li class="materiaSelect"><a class="dropdown-item item" href="#">Ciências</a></li>
-            <li class="materiaSelect"><a class="dropdown-item item" href="#">Artes</a></li>
-            <li class="materiaSelect"><a class="dropdown-item item" href="#">Inglês</a></li>
-            <li class="materiaSelect"><a class="dropdown-item item" href="#">Ed.Física</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas Enem</a></li>
-            <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas USP</a></li>
-            <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas Vestibular</a></li>
-            <li class="materiaSelect"><a class="dropdown-item itemProva" href="#">Provas UFMG</a></li>
-          </ul>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pesquisas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="tabela.php">Tabelas</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <!-- navegação superior do site -->
+  <nav id="navegacao">
+    <ul class="nav-rigth">
+      <li>
+        <span class="material-icons-outlined">
+          home
+        </span>
+      </li>
+      <li class="ensinoMedio">
+        <span class="material-icons-outlined">
+          library_books
+        </span>
+        <span class="material-icons-outlined seta">
+          arrow_drop_down
+        </span>
+        <ul class="ensinoMedio">
+         <li class="materiaSelect"><a class="item" href="#">Matematica</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Português</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Historia</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Geografia</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Filosofia</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Química</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Física</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Sociologia</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Artes</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Inglês</a></li>
+         <li class="materiaSelect"><a class="item" href="#">Ed.Física</a></li>
+         <li class="materiaSelect"><a><hr></a></li>
+         <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
+         <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
+         <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
+         <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
+       </ul>
+     </li>
+     <li>
+      <span class="material-icons-outlined">
+        library_books
+      </span>
+      <span class="material-icons-outlined seta">
+        arrow_drop_down
+      </span>
+    </li>
+    <li>
+     <span class="material-icons-outlined">
+      notifications
+    </span>
+  </li>
+  <li>
+   <span class="material-icons-outlined">
+    settings
+  </span>
+</li>
+</ul>
+<!-- icone de menu antes da logo que aparece na funcao de responsivo -->
+<span class="material-icons-outlined menu">
+  menu
+</span>
+<a class="logoTipo" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
+<div class="nav-rigth">
+</div>
 </nav>
-<!-- -------------------------SideNav do site----------------------------------- -->
+
+
+
+
+
+<style>
+  #navegacao{
+    position: fixed;
+    background: #1e1e1e;
+    display: block;
+    z-index: 5;
+    width: 100%;
+    height: 60px;
+  }
+  .menu{
+    position: relative;
+    left: 0px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    color: #EDEDED;
+    font-size: 45px;
+    display: none;
+  }
+  .logoTipo{
+    position: absolute;
+    top: 50%;
+    transform: translate(0%,-50%);
+    text-decoration: none;
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  .logoE{
+    color: #6B68E2;
+    border:2px solid #6B68E2;
+    position: relative;
+    padding:1px 12px 3px 12px;
+    margin-right: 7px;
+  }
+  .nomePrinci{
+    letter-spacing: 2px;
+    color: #fff;
+    font-family: 'Poppins';
+  }
+  .nav-rigth{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    list-style: none;
+  }
+  .nav-rigth li{
+    display: inline-block;
+    width: 60px
+  }
+  .nav-rigth .material-icons-outlined{
+    color: #EDEDED;
+    font-size: 25px;
+    margin-left: 27px;
+    width: 0px
+  }
+  .seta{
+    position: relative;
+    right: 10px;
+    width: 10px;
+    margin-left: 0px
+  }
+  ul li:hover .material-icons-outlined{
+    cursor: pointer;
+    color: #A6A6A6;
+  }
+  /* editando o submenu superior */
+  #navegacao ul ul{
+    display: block;
+    position: absolute;
+    margin-top: 14px;
+    width: 300px;
+    right: 20px;
+    border: none;
+    display: none;
+  }
+  #navegacao ul ul li{
+    position: relative;
+    display: block;
+    width: 100%;   
+    color: #fff;
+    text-align: left;
+    border: none;
+    margin: 0;
+    background: #D3D3D3;
+    box-sizing: border-box;
+  }
+  #navegacao ul ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-left: 20px;
+    border: none;
+    margin: 0;
+    background: #D3D3D3;
+    color: #2C2C2C;
+    font-family: 'Poppins'
+  }
+  #navegacao ul ul li:hover a{
+    background: #4040FC;
+    color: #fff;
+  }
+  #navegacao ul li a hr{
+    color: black;
+    margin-right: 20px;
+  }
+  section h1, h2{
+    text-transform: capitalize;
+  }
+</style>
+<!-- Navegação lateral do site -->
 <div class="submenu">
-  <!--
-  <div class="perfil" style="
+  <!-- <div class="perfil" style="
   background-image: url(midia/fundo.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -109,9 +225,8 @@
   <span class="nome">Hudson rafael</span>
   <i class="fa fa-caret-down" style="font-size: 40px;"></i>
   <i id="icone" class="fa fa-gear" style="font-size: 25px;"></i>
+</div> -->
 
-</div>
--->
 <?php
 
 include('db_contaus.php');
@@ -153,30 +268,9 @@ echo "</ul>";
   </p>
 
 </section>
- <style>
-  body{
-    background-color: #E4E4E4
-  }
-  section p{
-    font-size: 20px;
-  }
-  section h1, h2{
-    text-transform: capitalize;
-  }
-    .imgTopo{
-      height: 300px;
-     position: relative;
-     display: inline-block;
-     float: right;
-     margin: 0px 0px 20px 20px;
-   }
-   .imgEsquerda{
-     position: relative;
-     display: inline-block;
-     float: left;
-     margin: 0px 20px 20px 0px;
-   }
- </style>
+<style>
+
+</style>
 <!-- ---------------------------Trabalahndo no rodape do site------------------------------------ -->
 <footer class="footer">
   <ul>
