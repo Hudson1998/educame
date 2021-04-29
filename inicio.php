@@ -25,7 +25,7 @@
 </head>
 <body>
   <script>
- 
+
   </script>
   <!-- navegação superior do site -->
   <nav id="navegacao">
@@ -84,16 +84,30 @@
   </span>
 </li>
 <li title="Configuração">
-  <span class="material-icons-outlined">
-   settings
- </span>
+  <a class="setting" href="#">
+    <span class="material-icons-outlined">
+     settings
+   </span>
+   </a>
+   <ul class="config">
+     <li class="materiaSelect"><a id="tema" href="#">Tema Escuro: <span id="toggle" class="material-icons-outlined">
+      toggle_off
+    </span></a></li>
+  </ul>
 </li>
 </ul>
+<script>
+  function temaMuda(){
+   $(document).ready(function(){
+    $('#tema #toggle').text('toggle_off')
+  })
+ }
+</script>
 <!-- icone de menu antes da logo que aparece na funcao de responsivo -->
 <span class="material-icons-outlined menu">
  menu
 </span>
-<a class="logoTipo" onclick="mudaTema()" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
+<a class="logoTipo" onclick="temaMuda()" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
 
 <input id="search" type="text" placeholder="Matematica...">
 <span id="lupa" class="material-icons-outlined">

@@ -36,7 +36,7 @@ function listaEfeito(){
 }
 listaEfeito()
 $(document).ready(function(){
-	$('.item').click(function(){
+	$('.item').click(function(){		
 		var nome = $(this).text()
 		$.ajax({
 			url:'sumario.php',
@@ -53,54 +53,96 @@ $(document).ready(function(){
 					$('.submenu').append(data);
 					listaEfeito()
 					buscaContMateria()
+					temaSelect()
 				}
-				mudaTema()
 			}
 		})
 	})
 })
-  function buscaContMateria(){
-  $(document).ready(function(){
-    $('.sub-item').click(function(){
-      var conteudo = $(this).text()
-      console.log(conteudo)
-      $.ajax({
-        url:"conteudoBusca.php",
-        type: "POST",
-        data:{
-          conteudo: conteudo
-        },
-        success: function(response) {
-          console.log(response)
-          $('section').children().remove();
-          $('section').append(response);
-          mudaTema()
-        }
-      })
-    })
-  })
+function buscaContMateria(){
+	$(document).ready(function(){
+		$('.sub-item').click(function(){
+			mudaTema()
+			temaSelect()
+			var conteudo = $(this).text()
+			console.log(conteudo)
+			$.ajax({
+				url:"conteudoBusca.php",
+				type: "POST",
+				data:{
+					conteudo: conteudo
+				},
+				success: function(response) {
+					console.log(response)
+					$('section').children().remove();
+					$('section').append(response);
+					mudaTema()
+				}
+			})
+		})
+	})
 }
-  function abreMenu(){
-    $(document).ready(function(){
-      $('.ensinoMedio').click(function(){
-        var resposta = $('#navegacao ul ul').css('display');
-        //console.log(resposta)
-        if (resposta != "block") {
-          $('#navegacao ul ul').css('display','block')
-        }else{
-          $('#navegacao ul ul').css('display','none')
-        }
-      })
-    })
-  }
-  abreMenu()
-     function mudaTema(){
-      $(document).ready(function(){
-        $('body').css('background','#202124')
-        $('section').css('color','rgba(255,255,255,0.6)')
-        $('.submenu').css('background','#2e2e2e')
-        $('.submenu ul li a').css('color','rgba(255,255,255,.6)')
-        $('.submenu ul ul').css('background','#1e1e1e')
-      })
-    }
-    mudaTema()
+function abreMenu(){
+	$(document).ready(function(){
+		$('li.ensinoMedio').click(function(){
+			mudaTema()
+			var resposta = $(this).children('ul.ensinoMedio').css('display');
+			console.log(resposta)
+			if (resposta != "block") {
+				$('ul.ensinoMedio').css('display','block')
+			}else{
+				$('ul.ensinoMedio').css('display','none')
+			}
+		})
+		$('.setting').click(function(){
+			var resposta = $('.config').css('display');
+			console.log(resposta)
+			if (resposta != "block") {
+				$('ul.config').css('display','block')
+			}else{
+				$('ul.config').css('display','none')
+			}
+		})
+	})
+}
+abreMenu()
+function mudaTema(){
+	$(document).ready(function(){
+		$('#tema').click(function(){
+			console.log('deu certo, foi clicado')
+			var togg = $("#toggle").text();
+			if (togg != 'toggle_off') {
+				$('body').css('background','#e4e4e4')
+				$('section').css('color','#000')
+				$('.submenu').css('background','#EBEBEB')
+				$('.submenu ul li a').css('color','#1B1B1B')
+				$('.submenu ul ul').css('background','#D3D3D3')
+				$('#tema #toggle').text('toggle_off')
+			}else{
+				$('body').css('background','#202124')
+				$('section').css('color','rgba(255,255,255,0.6)')
+				$('.submenu').css('background','#2e2e2e')
+				$('.submenu ul li a').css('color','rgba(255,255,255,.6)')
+				$('.submenu ul ul').css('background','#1e1e1e')
+				$('#tema #toggle').text('toggle_on')
+			}
+		})
+	})
+}
+function temaSelect(){
+	var togg = $("#toggle").text();
+	if (togg == 'toggle_on') {
+		$('body').css('background','#202124')
+		$('section').css('color','rgba(255,255,255,0.6)')
+		$('.submenu').css('background','#2e2e2e')
+		$('.submenu ul li a').css('color','rgba(255,255,255,.6)')
+		$('.submenu ul ul').css('background','#1e1e1e')
+	}else{
+		$('body').css('background','#e4e4e4')
+		$('section').css('color','#000')
+		$('.submenu').css('background','#EBEBEB')
+		$('.submenu ul li a').css('color','#1B1B1B')
+		$('.submenu ul ul').css('background','#D3D3D3')
+	}
+}
+mudaTema()
