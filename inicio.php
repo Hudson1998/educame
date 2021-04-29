@@ -24,10 +24,13 @@
   <title>Education</title>
 </head>
 <body>
+  <script>
+ 
+  </script>
   <!-- navegação superior do site -->
   <nav id="navegacao">
     <ul class="nav-rigth">
-     <li>
+     <li title="home">
       <a href="inicio.php">
        <span class="material-icons-outlined">
          home
@@ -41,11 +44,11 @@
       </span>
     </a>
   </li>
-  <li class="ensinoMedio">
+  <li class="ensinoMedio" title="Ensino Básico">
    <span class="material-icons-outlined">
      library_books
    </span>
-   <span class="material-icons-outlined seta">
+   <span class="material-icons-outlined seta-estudos">
      arrow_drop_down
    </span>
    <ul class="ensinoMedio">
@@ -67,20 +70,20 @@
     <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
   </ul>
 </li>
-<li>
+<li title="Cursos">
   <span class="material-icons-outlined">
     library_books
   </span>
-  <span class="material-icons-outlined seta">
+  <span class="material-icons-outlined seta-cursos">
     arrow_drop_down
   </span>
 </li>
-<li>
+<li title="Notificação">
   <span class="material-icons-outlined">
     notifications
   </span>
 </li>
-<li>
+<li title="Configuração">
   <span class="material-icons-outlined">
    settings
  </span>
@@ -90,23 +93,13 @@
 <span class="material-icons-outlined menu">
  menu
 </span>
-<a class="logoTipo" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
+<a class="logoTipo" onclick="mudaTema()" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
 
 <input id="search" type="text" placeholder="Matematica...">
 <span id="lupa" class="material-icons-outlined">
   search
 </span>
 </nav>
-<script>
- function search(){
-  $(document).ready(function(){
-    $('#search').click(function(){
-      $('.lupa').css('display','none')
-    })
-  })
-}
-//search();
-</script>
 <div class="submenu">
   <?php
 

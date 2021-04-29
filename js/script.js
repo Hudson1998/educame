@@ -10,6 +10,7 @@ $(document).ready(function(){
 function listaEfeito(){
 	$(document).ready(function(){
 		$(".itemPrinci").on('click',function(){
+			mudaTema()
 			if ($(this).next().css('visibility') == "hidden") {
 				$(this).next().css({
 					"height": "auto",
@@ -53,6 +54,7 @@ $(document).ready(function(){
 					listaEfeito()
 					buscaContMateria()
 				}
+				mudaTema()
 			}
 		})
 	})
@@ -72,6 +74,7 @@ $(document).ready(function(){
           console.log(response)
           $('section').children().remove();
           $('section').append(response);
+          mudaTema()
         }
       })
     })
@@ -91,4 +94,13 @@ $(document).ready(function(){
     })
   }
   abreMenu()
- 
+     function mudaTema(){
+      $(document).ready(function(){
+        $('body').css('background','#202124')
+        $('section').css('color','rgba(255,255,255,0.6)')
+        $('.submenu').css('background','#2e2e2e')
+        $('.submenu ul li a').css('color','rgba(255,255,255,.6)')
+        $('.submenu ul ul').css('background','#1e1e1e')
+      })
+    }
+    mudaTema()
