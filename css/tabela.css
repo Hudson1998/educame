@@ -149,4 +149,9 @@ option{
 }
 tr td{
 	text-transform: capitalize;
+	height: 40px;
+	line-height: 40px;
+}
+tr td:hover{
+	cursor: pointer;
 }

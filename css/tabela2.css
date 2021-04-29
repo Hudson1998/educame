@@ -149,4 +149,5 @@ option{
 }
 tr td{
 	text-transform: capitalize;
+	height: 70px;
 }
