@@ -57,7 +57,7 @@ class tabelaEstudo{
 		return $this->conteudo;
 	}
 	function set_conteudo($conteudo){
-		$this->id = $conteudo;
+		$this->conteudo = $conteudo;
 	}
 	function get_titulo(){
 		return $this->texto;
