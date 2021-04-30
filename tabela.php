@@ -27,10 +27,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<!-- JavaScript -->
-	<script src="js/script.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/tabela.js"></script>
 	<link rel="stylesheet" href="css/tabela.css">
-
 	<title>Education</title>
 </head>
 <body>
@@ -61,6 +60,9 @@
 	   			<option value="artes">artes</option>
 	   			<option value="ingles">inglês</option>
 	   			<option value="ed.fisica">ed.fisica</option>
+	   			<option value="jquery">jquery</option>
+	   			<option value="c language">c language</option>
+	   			<option value="rede de computadores">rede de computadores</option>
 	   		</select>
 	   	</label>
 	   	<label id="ano" class="nomeText" for="ano">Ano
@@ -73,6 +75,18 @@
 	   			<option value="7° ano">7° ano</option>
 	   			<option value="8° ano">8° ano</option>
 	   			<option value="9° ano">9° ano</option>
+	   		    <option value="módulo 1">módulo 1</option>
+	   			<option value="módulo 2">módulo 2</option>
+	   			<option value="módulo 3">módulo 3</option>
+	   			<option value="módulo 4">módulo 4</option>
+	   			<option value="módulo 5">módulo 5</option>
+	   			<option value="módulo 6">módulo 6</option>
+	   			<option value="módulo 7">módulo 7</option>
+	   			<option value="módulo 8">módulo 8</option>
+	   			<option value="módulo 9">módulo 9</option>
+	   			<option value="módulo 10">módulo 10</option>
+	   			<option value="módulo 11">módulo 11</option>
+	   			<option value="módulo 12">módulo 12</option>
 	   		</select>
 	   	</label>
 		    <label id="conteudo" class="nomeText" for="conteudo">conteudo
@@ -87,76 +101,98 @@
 			<button onclick="enviaDados()" type="button" id="botaoAdiciona" class="btn btn-primary">Adicionar</button>
 	</form>
   </div>
-   <nav id="navegacao">
-   	<ul class="nav-rigth">
-   		<li>
-   			<a href="inicio.php" style="color:#fff">
-   			  <span class="material-icons-outlined">
-   			  	home
-   			  </span>   			
-   			</a>
-   		</li>
-   		<li title="Tabela">
-   			<a href="tabela.php">
-   				<span class="material-icons-outlined">
-   					dashboard_customize
-   				</span>
-   			</a>
-   		</li>
-   		<li class="ensinoMedio">
-   			<span class="material-icons-outlined">
-   				library_books
-   			</span>
-   			<span class="material-icons-outlined seta">
-   				arrow_drop_down
-   			</span>
-   			<ul class="ensinoMedio">
-   				<li class="materiaSelect"><a class="item" href="#">Matematica</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Português</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Historia</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Geografia</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Filosofia</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Química</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Física</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Sociologia</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Artes</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Inglês</a></li>
-   				<li class="materiaSelect"><a class="item" href="#">Ed.Física</a></li>
-   				<li class="materiaSelect"><a><hr></a></li>
-   				<li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
-   				<li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
-		        <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
-			    <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
-		    </ul>
-	        </li>
-	        <li>
-		        <span class="material-icons-outlined">
-		        	library_books
-		        </span>
-		        <span class="material-icons-outlined seta">
-		        	arrow_drop_down
-		        </span>
-	        </li>
-	        <li>
-		        <span class="material-icons-outlined">
-			        notifications
-		        </span>
-	        </li>
-	        <li>
-		        <span class="material-icons-outlined">
-		        	settings
-		        </span>
-	        </li>
-    </ul>
-	    <span class="material-icons-outlined menu" style="display: none">
-	       menu
-	    </span>
-	    <a class="logoTipo" href="#">
-	    	<span class="logoE">E</span>
-	    	<span class="nomePrinci">Education</span>
-	    </a>
-		</div>
-	</nav>
+ <nav id="navegacao">
+    <ul class="nav-rigth">
+     <li title="home">
+      <a href="inicio.php">
+       <span class="material-icons-outlined">
+         home
+       </span>
+     </a>
+   </li>
+   <li title="Tabela">
+    <a href="tabela.php">
+      <span class="material-icons-outlined">
+        dashboard_customize
+      </span>
+    </a>
+  </li>
+  <li class="ensinoMedio" title="Ensino Básico">
+   <span class="material-icons-outlined">
+     library_books
+   </span>
+   <span class="material-icons-outlined seta-estudos">
+     arrow_drop_down
+   </span>
+   <ul class="ensinoMedio">
+    <li class="materiaSelect"><a class="item" href="#">Matematica</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Português</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Historia</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Geografia</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Filosofia</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Química</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Física</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Sociologia</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Artes</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Inglês</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Ed.Física</a></li>
+    <li class="linha"><a id="linhaHr" ><hr></a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
+  </ul>
+</li>
+<li class="cursos" title="cursos">
+  <span class="material-icons-outlined">
+    library_books
+  </span>
+  <span class="material-icons-outlined seta-cursos">
+    arrow_drop_down
+  </span>
+  <ul class="cursos">
+    <li class="materiaSelect"><a class="item" href="#">PHP Language</a></li>
+    <li class="materiaSelect"><a class="item" href="#">rede de computadores</a></li>
+    <li class="materiaSelect"><a class="item" href="#">C Language</a></li>
+    <li class="materiaSelect"><a class="item" href="#">JavaScript</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Jquery</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Css</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Angular 11</a></li>
+    <li class="materiaSelect"><a class="item" href="#">HTML 5</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Bootstrap 5</a></li>
+    <li class="linha"><a id="linhaHr" ><hr></a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
+  </ul>
+</li>
+<li title="Notificação">
+  <span class="material-icons-outlined">
+    notifications
+  </span>
+</li>
+<li title="Configuração">
+  <a class="setting" href="#">
+    <span class="material-icons-outlined">
+     settings
+   </span>
+ </a>
+ <ul class="config">
+   <li class="materiaSelect"><a id="tema" href="#">Tema Escuro: <span id="toggle" class="material-icons-outlined">
+    toggle_off
+  </span></a></li>
+</ul>
+</li>
+</ul>
+<!-- icone de menu antes da logo que aparece na funcao de responsivo -->
+<a class="logoTipo" onclick="temaMuda()" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
+
+<input id="search" type="text" placeholder="Matematica...">
+<span id="lupa" class="material-icons-outlined">
+  search
+</span>
+</nav>
 	<section style="float: right;display: inline">
 		<h1 class="title">Tabela de Estudos</h1>
 		<hr>

@@ -133,14 +133,22 @@ ul li:hover .material-icons-outlined{
   color: #2C2C2C;
   font-family: 'Poppins'
 }
-#navegacao ul ul li:hover a{
+.linha hr{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #B6B6B6;
+}
+#navegacao ul ul li:hover .item{
   background: #4040FC;
   color: #fff;
 }
+/*
 #navegacao ul li a hr{
   color: black;
   margin-right: 20px;
 }
+*/
 section h1, h2{
   text-transform: capitalize;
 }
@@ -274,8 +282,8 @@ section h1, h2{
 
 }
 .itemPrinci{
-  border-top: 1px solid rgba(0,0,0,.02);
-  border-bottom: 1px solid rgba(0,0,0,.2);
+ /* border-top: 1px solid rgba(0,0,0,.02);*/
+ border-bottom: 1px solid rgba(0,0,0,.06);
 }
 .submenu ul ul li a{
   padding-left: 40px;

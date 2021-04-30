@@ -24,9 +24,7 @@
   <title>Education</title>
 </head>
 <body>
-  <script>
 
-  </script>
   <!-- navegação superior do site -->
   <nav id="navegacao">
     <ul class="nav-rigth">
@@ -63,20 +61,36 @@
     <li class="materiaSelect"><a class="item" href="#">Artes</a></li>
     <li class="materiaSelect"><a class="item" href="#">Inglês</a></li>
     <li class="materiaSelect"><a class="item" href="#">Ed.Física</a></li>
-    <li class="materiaSelect"><a><hr></a></li>
+    <li class="linha"><a id="linhaHr" ><hr></a></li>
     <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
     <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
     <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
     <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
   </ul>
 </li>
-<li title="Cursos">
+<li class="cursos" title="cursos">
   <span class="material-icons-outlined">
     library_books
   </span>
   <span class="material-icons-outlined seta-cursos">
     arrow_drop_down
   </span>
+  <ul class="cursos">
+    <li class="materiaSelect"><a class="item" href="#">PHP Language</a></li>
+    <li class="materiaSelect"><a class="item" href="#">rede de computadores</a></li>
+    <li class="materiaSelect"><a class="item" href="#">C Language</a></li>
+    <li class="materiaSelect"><a class="item" href="#">JavaScript</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Jquery</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Css</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Angular 11</a></li>
+    <li class="materiaSelect"><a class="item" href="#">HTML 5</a></li>
+    <li class="materiaSelect"><a class="item" href="#">Bootstrap 5</a></li>
+    <li class="linha"><a id="linhaHr" ><hr></a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
+    <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
+  </ul>
 </li>
 <li title="Notificação">
   <span class="material-icons-outlined">
@@ -88,12 +102,12 @@
     <span class="material-icons-outlined">
      settings
    </span>
-   </a>
-   <ul class="config">
-     <li class="materiaSelect"><a id="tema" href="#">Tema Escuro: <span id="toggle" class="material-icons-outlined">
-      toggle_off
-    </span></a></li>
-  </ul>
+ </a>
+ <ul class="config">
+   <li class="materiaSelect"><a id="tema" href="#">Tema Escuro: <span id="toggle" class="material-icons-outlined">
+    toggle_off
+  </span></a></li>
+</ul>
 </li>
 </ul>
 <script>

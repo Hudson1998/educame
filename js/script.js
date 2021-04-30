@@ -6,7 +6,9 @@ $(document).ready(function(){
 			"z-index":"-10"
 		})
 	})
-});
+	temaInicial()
+})
+temaInicial()
 function listaEfeito(){
 	$(document).ready(function(){
 		$(".itemPrinci").on('click',function(){
@@ -103,6 +105,16 @@ function abreMenu(){
 				$('ul.config').css('display','none')
 			}
 		})
+		$('li.cursos').click(function(){
+			mudaTema()
+			var resposta = $(this).children('ul.cursos').css('display');
+			console.log(resposta)
+			if (resposta != "block") {
+				$('ul.cursos').css('display','block')
+			}else{
+				$('ul.cursos').css('display','none')
+			}
+		})
 	})
 }
 abreMenu()
@@ -146,3 +158,11 @@ function temaSelect(){
 	}
 }
 mudaTema()
+function temaInicial(){
+	$('body').css('background','#202124')
+	$('section').css('color','rgba(255,255,255,0.6)')
+	$('.submenu').css('background','#2e2e2e')
+	$('.submenu ul li a').css('color','rgba(255,255,255,.6)')
+	$('.submenu ul ul').css('background','#1e1e1e')
+	$('#tema #toggle').text('toggle_on')
+}

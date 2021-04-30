@@ -1,133 +1,193 @@
 @charset "utf8";
 body{
-    background-color: #E4E4E4
+  background-color: #E4E4E4;
 }
 /*header da pagina*/
-  #navegacao{
-    position: fixed;
-    background: #1e1e1e;
-    display: block;
-    z-index: 5;
-    width: 100%;
-    height: 60px;
-  }
-  .menu{
-    position: relative;
-    left: 0px;
-    top: 50%;
-    transform: translate(0%,-50%);
-    color: #EDEDED;
-    font-size: 45px;
-    display: none;
-  }
-  .logoTipo{
-    position: absolute;
-    top: 50%;
-    transform: translate(0%,-50%);
-    text-decoration: none;
-    font-size: 20px;
-    padding-left: 20px;
-  }
-  .logoE{
-    color: #6B68E2;
-    border:2px solid #6B68E2;
-    position: relative;
-    padding:1px 12px 3px 12px;
-    margin-right: 7px;
-  }
-  .nomePrinci{
-    letter-spacing: 2px;
-    color: #fff;
-    font-family: 'Poppins';
-  }
-  .nav-rigth{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translate(0%,-50%);
-    list-style: none;
-  }
-  .nav-rigth li{
-    display: inline-block;
-    width: 60px
-  }
-  .nav-rigth .material-icons-outlined{
-    color: #EDEDED;
-    font-size: 25px;
-    margin-left: 27px;
-    width: 0px
-  }
-  .seta{
-    position: relative;
-    right: 10px;
-    width: 10px;
-    margin-left: 0px
-  }
-  ul li:hover .material-icons-outlined{
-    cursor: pointer;
-    color: #A6A6A6;
-  }
-  /* editando o submenu superior */
-  #navegacao ul ul{
-    display: block;
-    position: absolute;
-    margin-top: 14px;
-    width: 300px;
-    right: 20px;
-    border: none;
-    display: none;
-  }
-  #navegacao ul ul li{
-    position: relative;
-    display: block;
-    width: 100%;   
-    color: #fff;
-    text-align: left;
-    border: none;
-    margin: 0;
-    background: #D3D3D3;
-    box-sizing: border-box;
-  }
-  #navegacao ul ul li a{
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 40px;
-    text-decoration: none;
-    padding-top: 5px;
-    padding-left: 20px;
-    border: none;
-    margin: 0;
-    background: #D3D3D3;
-    color: #2C2C2C;
-    font-family: 'Poppins'
-  }
-  #navegacao ul ul li:hover a{
-    background: #4040FC;
-    color: #fff;
-  }
-  #navegacao ul li a hr{
-    color: black;
-    margin-right: 20px;
-  }
-  section h1, h2{
-    text-transform: capitalize;
-  }
+#navegacao{
+  position: fixed;
+  background: #1e1e1e;
+  display: block;
+  z-index: 5;
+  width: 100%;
+  height: 60px;
+}
+.menu{
+  position: relative;
+  left: 0px;
+  top: 50%;
+  transform: translate(0%,-50%);
+  color: #EDEDED;
+  font-size: 45px;
+  display: none;
+}
+.logoTipo{
+  position: absolute;
+  top: 50%;
+  transform: translate(0%,-50%);
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 20px;
+}
+.logoE{
+  color: #6B68E2;
+  border:2px solid #6B68E2;
+  position: relative;
+  padding:1px 12px 3px 12px;
+  margin-right: 7px;
+}
+.nomePrinci{
+  letter-spacing: 2px;
+  color: #fff;
+  font-family: 'Poppins';
+}
+#lupa{
+  position: absolute;
+  color: #C7C4C4;
+  font-size: 25px;
+  width: 0px;
+  top: 50%;
+  transform: translate(0%,-50%);
+  left: 25.5%;
+}
+#search{
+  position: absolute;
+  width: 30%;
+  background: rgba(255,255,255,.1);
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%,-50%);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 38px;
+  color: #fff;
+  font-family: 'Poppins';
+
+}
+#search:focus{
+  outline: none;
+  box-shadow: 0px 0px 0px 2pt #3B3B3B;
+}
+.nav-rigth{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0%,-50%);
+  list-style: none;
+}
+.nav-rigth li{
+  display: inline-block;
+  width: 50px
+}
+.nav-rigth .material-icons-outlined{
+  color: #EDEDED;
+  font-size: 25px;
+  margin-left: 27px;
+  width: 0px
+}
+.seta-estudos,.seta-cursos{
+  position: absolute;
+}
+.seta-cursos{
+  right: 31.5%;
+}
+.seta-estudos{
+  right: 47.5%;
+}
+ul li:hover .material-icons-outlined{
+  cursor: pointer;
+  color: #A6A6A6;
+}
+/* editando o submenu superior */
+#navegacao ul ul{
+  display: block;
+  position: absolute;
+  margin-top: 14px;
+  width: 300px;
+  right: 20px;
+  border: none;
+  display: none;
+}
+#navegacao ul ul li{
+  position: relative;
+  display: block;
+  width: 100%;   
+  color: #fff;
+  text-align: left;
+  border: none;
+  margin: 0;
+  background: #D3D3D3;
+  box-sizing: border-box;
+}
+#navegacao ul ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height:40px;
+  text-decoration: none;
+  padding-left: 20px;
+  border: none;
+  margin: 0;
+  background: #D3D3D3;
+  color: #2C2C2C;
+  font-family: 'Poppins'
+}
+.linha hr{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #B6B6B6;
+}
+#navegacao ul ul li:hover .item{
+  background: #4040FC;
+  color: #fff;
+}
+/*
+#navegacao ul li a hr{
+  color: black;
+  margin-right: 20px;
+}
+*/
+section h1, h2{
+  text-transform: capitalize;
+}
+/*Editando o setting com config como submenu*/
+.config{
+  position: absolute;
+  left: 100px;
+  height: 40px;
+  width: 100px;
+}
+.config .escuro{
+  background: black;
+  color: #fff;
+}
+#toggle{
+  position:absolute;
+  display:inline;
+  color:#000;
+  font-size:35px;
+  left:150px;
+  line-height: 40px;
+  z-index: 10;
+}
 /* Corpo da pagina */
 section{
-    margin-top: 64px;
-    display: inline-block;
-    width: 85%;
-    float: right;
-    padding:50px;
-    text-align: justify;
-    padding-bottom: 500px;
+  margin-top: 64px;
+  display: inline-block;
+  width: 85%;
+  float: right;
+  padding:50px;
+  text-align: justify;
+  padding-bottom: 500px;
 }
 section p{
-    font-size: 20px;
+  font-size: 20px;
+  text-indent: 40px;
 }
 section h1, h2{
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 .imgTopo{
   height: 300px;
@@ -137,113 +197,113 @@ section h1, h2{
   margin: 0px 0px 20px 20px;
 }
 .imgEsquerda{
-   position: relative;
-   display: inline-block;
-   float: left;
-   margin: 0px 20px 20px 0px;
+ position: relative;
+ display: inline-block;
+ float: left;
+ margin: 0px 20px 20px 0px;
 }
 /*--------------------------------------------------*/
 .perfil{
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 200px;
-    background-color: #121212;
-    box-sizing: border-box;
-    padding-top: 20px;
-    background-blend-mode: overlay;
-    text-align: center;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 200px;
+  background-color: #121212;
+  box-sizing: border-box;
+  padding-top: 20px;
+  background-blend-mode: overlay;
+  text-align: center;
 }
 .perfil .nome{
-    position: relative;
-    font-family: 'Poppins',sans-serif;
-    display: block;
-    padding:10px;
+  position: relative;
+  font-family: 'Poppins',sans-serif;
+  display: block;
+  padding:10px;
 }
 .perfil #icone{
-    left: 85%
+  left: 85%
 }
 .perfil i{
-    width: 30px;
-    position: absolute;
-    display: flex;
-    left: 15px;
-    margin-top: 70px;
+  width: 30px;
+  position: absolute;
+  display: flex;
+  left: 15px;
+  margin-top: 70px;
 }
 .perfil i:hover{
-    cursor: pointer;
-    color: cyan;
+  cursor: pointer;
+  color: cyan;
 }
 .foto{
-    position: relative;
-    display: block;
-    width: 130px;
-    height: 130px;
-    background-color: #787878;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 100px;
-    box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 130px;
+  height: 130px;
+  background-color: #787878;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 100px;
+  box-sizing: border-box;
 }
 /*---------------------------------------------------*/
 .submenu{
-    position: fixed;
-    width: 15%;
-    padding-top: 56px;
-    height: 100%;
-    background-color: #EBEBEB;
-    display: block;
-    box-sizing: border-box;
-    color: #575757;
-    font-size: 13px;
-    overflow:auto;
-    padding-bottom: 250px;
-    text-transform: capitalize;
-    font-family: 'Poppins',sans-serif;
+  position: fixed;
+  width: 15%;
+  padding-top: 56px;
+  height: 100%;
+  background-color: #EBEBEB;
+  display: block;
+  box-sizing: border-box;
+  color: #575757;
+  font-size: 13px;
+  overflow:auto;
+  padding-bottom: 250px;
+  text-transform: capitalize;
+  font-family: 'Poppins',sans-serif;
 }
 .submenu ul{
-    list-style: none;
-    position: relative;
-    left: 0;
-    padding-left: 0;
-    display: block;
+  list-style: none;
+  position: relative;
+  left: 0;
+  padding-left: 0;
+  display: block;
 }
 .submenu ul li a{
-    color: #1B1B1B;
-    text-decoration: none;
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    box-sizing: border-box;
-    padding-left: 14px;
-    border-left: 2px solid rgba(0,0,0,.0);
+  color: #1B1B1B;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  padding-left: 14px;
+  border-left: 2px solid rgba(0,0,0,.0);
 
 }
 .itemPrinci{
-    border-top: 1px solid rgba(0,0,0,.02);
-    border-bottom: 1px solid rgba(0,0,0,.2);
+ /* border-top: 1px solid rgba(0,0,0,.02);*/
+ border-bottom: 1px solid rgba(0,0,0,.06);
 }
 .submenu ul ul li a{
-    padding-left: 40px;
-    box-sizing: border-box;
+  padding-left: 40px;
+  box-sizing: border-box;
 }
 .submenu i{
-   position: absolute;
-   top: 50%;
-   right: 20px;
-   transform: translateY(-50%);
-   font-size: 13px;
-   transition: transform 0.2s;
+ position: absolute;
+ top: 50%;
+ right: 20px;
+ transform: translateY(-50%);
+ font-size: 13px;
+ transition: transform 0.2s;
 }
 .submenu ul ul{
-    position: relative;
-    visibility: hidden;
-    overflow: hidden;
-    max-height: 0;
-    background-color: #D3D3D3;
-    transition:all .5s;
+  position: relative;
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+  background-color: #D3D3D3;
+  transition:all .5s;
 }
 /*
 .submenu ul li:hover ul{
@@ -258,18 +318,18 @@ section h1, h2{
 }
 */
 .submenu ul li a:hover{
-    background-color: #345AFF;
-    color: #fff;
-    border-left:2px solid #345AFF;
+  background-color: #345AFF;
+  color: #fff;
+  border-left:2px solid #345AFF;
 }
 
 /*---------------------Footer--------------------------*/
 footer{
-    width: 100%;
-    height: 500px;
-    display: flex;
-    bottom: 0;
-    background-color: #1a1919;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  bottom: 0;
+  background-color: #1a1919;
 }
 /*--------barra de rolagem----------------------*/
 .submenu::-webkit-scrollbar {
@@ -294,9 +354,9 @@ footer{
 }
 /*-----------cabecalho superior-----------------*/
 .cabecalho-superior{
-    background-color: #626262
+  background-color: #626262
 }
 .nav-link{
-    font-size: 14px;
-    color: #fff
+  font-size: 14px;
+  color: #fff
 }
