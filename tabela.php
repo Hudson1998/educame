@@ -29,6 +29,7 @@
 	<!-- JavaScript -->
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/tabela.js"></script>
+
 	<link rel="stylesheet" href="css/tabela.css">
 	<title>Education</title>
 </head>
@@ -45,7 +46,7 @@
 	   " alt="">
 	   <label id="id" class="nomeText" for="id">Id
 	   	<input id="tId" placeholder="1..." type="number"></label>
-	   	<label id="materia" class="nomeText" for="materia">Materia
+	   	<label id="materia" class="nomeText" for="materia">Materia</label>
 	   		<select name="materia" id="sMateria">
 	   			<option value="" selected></option>
 	   			<option value="matematica">matematica</option>
@@ -194,6 +195,7 @@
 </span>
 </nav>
 	<section style="float: right;display: inline">
+		<!-- tabela de sumario -->
 		<h1 class="title">Tabela de Estudos</h1>
 		<hr>
 		<h4>Abaixo a tabela de informações do sistema</h4>
@@ -224,8 +226,55 @@
 				echo "</tr>";
 			}
 				?>
-			</tbody>
-		</table>
+		</tbody>
+	</table>
+	<h1 class="title">Tabela Sumário</h1>
+	<hr>
+	<h4>Veja as informações na tabela sumário</h4>
+	<button id="btnAddMat" type="button" class="btn btn-success btnTableMat">Adicionar</button>
+	<!-- ------------------------------------------------------------------------------------------------ -->
+
+<!-- ------------------------------------------------------------------------------------------------- -->
+	<table class="table table-hover table-dark">
+        <thead>
+           	<input class="cxTabela t1" type="number" placeholder="id">
+           	<input class="cxTabela t2" type="text" placeholder="materia">
+           	<input class="cxTabela t3" type="text" placeholder="modulo">
+			<tr>
+				<th scope="col"></th>		
+				<th scope="col">Id</th>				
+				<th scope="col">Matéria</th>				
+				<th scope="col">Módulo</th>
+				<th scope="col" width="100px"></th>
+			</tr>
+		</thead>
+        <tbody class="tabelaGuia">
+              <tr>
+              	<td></td>
+              	<td></td>
+              	<td></td>
+              	<td></td>
+              	<td>
+              		<i class='material-icons btnTableMat'>mode_edit</i>
+		            <i class='material-icons btnTableMat'>delete</i>
+              	</td>             
+              </tr>
+              <tr>
+              	<td></td>
+              	<td></td>
+              	<td></td>
+              	<td></td>
+              	<td></td>              	
+              </tr>
+              <tr>
+              	<td></td>
+              	<td></td>
+              	<td></td>
+              	<td></td>
+              	<td></td>
+              </tr>
+            </tbody>
+        </table>
 	</section>
 	<footer class="footer">
 		<ul>

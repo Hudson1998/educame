@@ -206,3 +206,62 @@ function enviaDados(){
 	editarDados()
 }
 editarDados()
+$.ajax({
+	url:"optionMateria.php",
+	type:"POST",
+	data:{
+		metodo:"pegaLista"
+	},
+	success:function(data){
+		var teste = JSON.parse(data)
+		//console.log(teste.length)
+		$(document).ready(function(){
+			$('.tabelaGuia').children().remove();
+			for (var i = 0; i < teste.length; i++) {
+				//console.log(teste)
+				$('.tabelaGuia').append("<tr><td></td><td>"+teste[i].id+"</td><td>"+teste[i].materia+"</td><td>"+teste[i].modulo+"</td><td><i class='material-icons btnTableMat'>mode_edit</i><i class='material-icons btnTableMat'>delete</i></td></tr>");	
+			}
+			botaoTabelaSumario()
+		})
+
+	}
+})
+function botaoTabelaSumario(){
+	$('.btnTableMat').click(function(){
+		console.log("Inciando")
+		var id = $('.t1').val()
+		var materia = $('.t2').val();
+		var modulo = $('.t3').val();
+		var metodo = $(this).text()												
+		switch (metodo) {
+			case 'Adicionar':
+				(()=>{
+					$.ajax({
+						url:'optionMateria.php',
+						type:'POST',
+						data:{
+							metodo:metodo,
+							id:id,
+							materia:materia,
+							modulo:modulo
+						},
+						success:function(data){
+							console.log(data)
+						}
+					})
+			    })();
+				break;
+			case 'delete':
+			    $(this).parents('tr').remove();
+			    break;
+			case 'mode_edit':
+			    console.log('teste 3')
+			    break;
+			default:
+				console.log('deu errado')
+				break;
+		}
+		console.log('testando')
+	})
+}
+botaoTabelaSumario()

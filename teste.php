@@ -7,13 +7,25 @@
 </head>
 <body>
 	<?php
-	include('insertTableMaterial.php');
-	$number = new MaterialContent;
-	$id = 1;
-	$materia = "matematica";
-	$conteudo = "Raiz";
-	//echo $number->addCont($id,$materia,$conteudo);
-	echo $number->mostraLista();
-	 ?>
+	$lista = [
+		[
+			"nome"=>"hudson",
+			"idade"=>22,
+			"proficao"=>"eletricista"
+	    ],
+	    [
+			"nome"=>"douglas",
+			"idade"=>18,
+			"proficao"=>"eletricista"
+	    ],
+	    [
+			"nome"=>"carlos",
+			"idade"=>29,
+			"proficao"=>"eletricista"
+	    ]
+	];
+	echo json_encode($lista);
+
+	?>
 </body>
 </html>
