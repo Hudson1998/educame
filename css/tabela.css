@@ -62,9 +62,9 @@ section{
 	padding: 7px;
 }
 .nomeText{
-	display: block;
+	display: inline-block;
 	position: relative;
-	width: 50px;
+	width: 70px;
 	margin-top: 20px;
 	margin-right:10px;
 }
@@ -82,11 +82,15 @@ section{
 	margin-right:;
 }
 #materia{
-	width: 200px;
-	margin-right: 100px	
+	position: absolute;
+	width: 0px;
+	margin-right: 0px	
 }
-#materia select{
-	width: 300px;
+#sMateria{
+	display: inline-block;
+	position: relative;
+	float: top;
+	width: 340px;
 	text-transform: capitalize;
 }
 #ano{

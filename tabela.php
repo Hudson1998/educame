@@ -4,8 +4,6 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- -------------Css Style ---------------------------------->
-	<link rel="stylesheet" href="css/estilo.css">
 	<!-- material icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">
@@ -29,7 +27,7 @@
 	<!-- JavaScript -->
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/tabela.js"></script>
-
+	<link rel="stylesheet" href="css/estilo.css">
 	<link rel="stylesheet" href="css/tabela.css">
 	<title>Education</title>
 </head>
@@ -232,9 +230,6 @@
 	<hr>
 	<h4>Veja as informações na tabela sumário</h4>
 	<button id="btnAddMat" type="button" class="btn btn-success btnTableMat">Adicionar</button>
-	<!-- ------------------------------------------------------------------------------------------------ -->
-
-<!-- ------------------------------------------------------------------------------------------------- -->
 	<table class="table table-hover table-dark">
         <thead>
            	<input class="cxTabela t1" type="number" placeholder="id">

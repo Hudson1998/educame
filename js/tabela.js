@@ -249,6 +249,9 @@ function botaoTabelaSumario(){
 							console.log(data)
 						}
 					})
+					$('.tabelaGuia').append((()=>{
+						return "<tr><td></td><td>"+id+"</td><td>"+materia+"</td><td>"+modulo+"</td><td><i class='material-icons btnTableMat'>mode_edit</i><i class='material-icons btnTableMat'>delete</i></td></tr>"
+					})())
 			    })();
 				break;
 			case 'delete':
