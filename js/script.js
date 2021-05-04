@@ -8,6 +8,11 @@ $(document).ready(function(){
 	})
 	temaInicial()
 })
+function eventSubMenu(){
+		$('section,.submenu').click(function(){
+			fechaSubmenu()
+		})	
+	}
 temaInicial()
 function listaEfeito(){
 	$(document).ready(function(){
@@ -89,33 +94,48 @@ function abreMenu(){
 		$('li.ensinoMedio').click(function(){
 			mudaTema()
 			var resposta = $(this).children('ul.ensinoMedio').css('display');
-			console.log(resposta)
+			//console.log(resposta)
 			if (resposta != "block") {
 				$('ul.ensinoMedio').css('display','block')
+				$('ul.config').css('display','none')
+				$('ul.cursos').css('display','none')
 			}else{
 				$('ul.ensinoMedio').css('display','none')
+				eventSubMenu()
 			}
 		})
 		$('.setting').click(function(){
 			var resposta = $('.config').css('display');
-			console.log(resposta)
+			//console.log(resposta)
 			if (resposta != "block") {
 				$('ul.config').css('display','block')
+				$('ul.ensinoMedio').css('display','none')
+				$('ul.cursos').css('display','none')
 			}else{
 				$('ul.config').css('display','none')
+				eventSubMenu()
 			}
 		})
 		$('li.cursos').click(function(){
 			mudaTema()
 			var resposta = $(this).children('ul.cursos').css('display');
-			console.log(resposta)
+			//console.log(resposta)
 			if (resposta != "block") {
 				$('ul.cursos').css('display','block')
+				$('ul.config').css('display','none')
+				$('ul.ensinoMedio').css('display','none')
 			}else{
 				$('ul.cursos').css('display','none')
+				eventSubMenu()
 			}
 		})
 	})
+}
+function fechaSubmenu(){
+	$('ul.cursos').css('display','none')
+	$('ul.config').css('display','none')
+	$('ul.ensinoMedio').css('display','none')
+
 }
 abreMenu()
 function mudaTema(){
@@ -166,3 +186,20 @@ function temaInicial(){
 	$('.submenu ul ul').css('background','#1e1e1e')
 	$('#tema #toggle').text('toggle_on')
 }
+$.ajax({
+	url:'optionMateria.php',
+	type:'POST',
+	data:{
+		id:"",
+		materia:"",
+		modulo:"",
+		metodo:"pegaLista"
+	},
+	success:function(data){
+		var lista = JSON.parse(data)
+		console.log(lista[0].materia)
+		for (var i = 0; i < lista.length; i++) {
+			$('ul.cursos').append("<li class='materiaSelect'><a class='item' href='#'>"+lista[i].materia+"</a></li>")
+		}
+	}   
+})

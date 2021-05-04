@@ -6,26 +6,6 @@
 	<title>Document</title>
 </head>
 <body>
-	<?php
-	$lista = [
-		[
-			"nome"=>"hudson",
-			"idade"=>22,
-			"proficao"=>"eletricista"
-	    ],
-	    [
-			"nome"=>"douglas",
-			"idade"=>18,
-			"proficao"=>"eletricista"
-	    ],
-	    [
-			"nome"=>"carlos",
-			"idade"=>29,
-			"proficao"=>"eletricista"
-	    ]
-	];
-	echo json_encode($lista);
-
-	?>
+<h1>Ola mundo</h1>
 </body>
 </html>

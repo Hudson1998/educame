@@ -42,9 +42,9 @@ class MaterialContent{
 				$materia = $row["materia"];
 				$modulo = $row["modulo"];
 				$adiciona = [
-			     	"id"=>$id,
-			     	"materia"=>$materia,
-			     	"modulo"=>$modulo
+					"id"=>$id,
+					"materia"=>$materia,
+					"modulo"=>$modulo
 				];
 				array_push($lista,$adiciona);
 			}
@@ -56,6 +56,44 @@ class MaterialContent{
 			return json_encode($lista);
 		}else{
 			return "<h2>Deu errado</h2>";
+		}
+		$conn->close();
+	}
+	function removeCount($id){
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "contaus";
+// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+
+		$sql = "DELETE FROM `contaus`.`sumario` WHERE (`id` = '".$id."')";
+
+		if ($conn->query($sql) === TRUE) {
+			return "Deletado linha do id $id";
+		} else {
+			return "Eroo ao excluir linha";
+		}
+		$conn->close();
+	}
+	function alterTable($id,$chave,$valor){
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "contaus";
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		if ($conn->connect_error) {
+			die("Connection failed: " . $conn->connect_error);
+		}
+		$sql = "UPDATE sumario SET ".$chave."='".$valor."' WHERE id=".$id."";
+		if ($conn->query($sql) === TRUE) {
+			return "Alterado linha do id: $id";
+		} else {
+			return "Erro ao alterar linha do id: $id";
 		}
 		$conn->close();
 	}

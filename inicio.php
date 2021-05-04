@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,11 +66,6 @@
     <li class="materiaSelect"><a class="item" href="#">Artes</a></li>
     <li class="materiaSelect"><a class="item" href="#">Inglês</a></li>
     <li class="materiaSelect"><a class="item" href="#">Ed.Física</a></li>
-    <li class="linha"><a id="linhaHr" ><hr></a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
   </ul>
 </li>
 <li class="cursos" title="cursos">
@@ -76,20 +76,6 @@
     arrow_drop_down
   </span>
   <ul class="cursos">
-    <li class="materiaSelect"><a class="item" href="#">PHP Language</a></li>
-    <li class="materiaSelect"><a class="item" href="#">rede de computadores</a></li>
-    <li class="materiaSelect"><a class="item" href="#">C Language</a></li>
-    <li class="materiaSelect"><a class="item" href="#">JavaScript</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Jquery</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Css</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Angular 11</a></li>
-    <li class="materiaSelect"><a class="item" href="#">HTML 5</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Bootstrap 5</a></li>
-    <li class="linha"><a id="linhaHr" ><hr></a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
   </ul>
 </li>
 <li title="Notificação">
@@ -110,18 +96,11 @@
 </ul>
 </li>
 </ul>
-<script>
-  function temaMuda(){
-   $(document).ready(function(){
-    $('#tema #toggle').text('toggle_off')
-  })
- }
-</script>
 <!-- icone de menu antes da logo que aparece na funcao de responsivo -->
 <span class="material-icons-outlined menu">
  menu
 </span>
-<a class="logoTipo" onclick="temaMuda()" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
+<a class="logoTipo" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
 
 <input id="search" type="text" placeholder="Matematica...">
 <span id="lupa" class="material-icons-outlined">

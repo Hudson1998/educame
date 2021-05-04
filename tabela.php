@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="pt-br">
 <head>
+	<meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -59,9 +64,6 @@
 	   			<option value="artes">artes</option>
 	   			<option value="ingles">inglês</option>
 	   			<option value="ed.fisica">ed.fisica</option>
-	   			<option value="jquery">jquery</option>
-	   			<option value="c language">c language</option>
-	   			<option value="rede de computadores">rede de computadores</option>
 	   		</select>
 	   	</label>
 	   	<label id="ano" class="nomeText" for="ano">Ano
@@ -74,18 +76,6 @@
 	   			<option value="7° ano">7° ano</option>
 	   			<option value="8° ano">8° ano</option>
 	   			<option value="9° ano">9° ano</option>
-	   		    <option value="módulo 1">módulo 1</option>
-	   			<option value="módulo 2">módulo 2</option>
-	   			<option value="módulo 3">módulo 3</option>
-	   			<option value="módulo 4">módulo 4</option>
-	   			<option value="módulo 5">módulo 5</option>
-	   			<option value="módulo 6">módulo 6</option>
-	   			<option value="módulo 7">módulo 7</option>
-	   			<option value="módulo 8">módulo 8</option>
-	   			<option value="módulo 9">módulo 9</option>
-	   			<option value="módulo 10">módulo 10</option>
-	   			<option value="módulo 11">módulo 11</option>
-	   			<option value="módulo 12">módulo 12</option>
 	   		</select>
 	   	</label>
 		    <label id="conteudo" class="nomeText" for="conteudo">conteudo
@@ -135,11 +125,6 @@
     <li class="materiaSelect"><a class="item" href="#">Artes</a></li>
     <li class="materiaSelect"><a class="item" href="#">Inglês</a></li>
     <li class="materiaSelect"><a class="item" href="#">Ed.Física</a></li>
-    <li class="linha"><a id="linhaHr" ><hr></a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
   </ul>
 </li>
 <li class="cursos" title="cursos">
@@ -150,20 +135,6 @@
     arrow_drop_down
   </span>
   <ul class="cursos">
-    <li class="materiaSelect"><a class="item" href="#">PHP Language</a></li>
-    <li class="materiaSelect"><a class="item" href="#">rede de computadores</a></li>
-    <li class="materiaSelect"><a class="item" href="#">C Language</a></li>
-    <li class="materiaSelect"><a class="item" href="#">JavaScript</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Jquery</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Css</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Angular 11</a></li>
-    <li class="materiaSelect"><a class="item" href="#">HTML 5</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Bootstrap 5</a></li>
-    <li class="linha"><a id="linhaHr" ><hr></a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas Enem</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas USP</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas Vestibular</a></li>
-    <li class="materiaSelect"><a class="itemProva" href="#">Provas UFMG</a></li>
   </ul>
 </li>
 <li title="Notificação">
@@ -185,6 +156,9 @@
 </li>
 </ul>
 <!-- icone de menu antes da logo que aparece na funcao de responsivo -->
+<span class="material-icons-outlined menu">
+ menu
+</span>
 <a class="logoTipo" onclick="temaMuda()" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
 
 <input id="search" type="text" placeholder="Matematica...">
@@ -212,7 +186,7 @@
 				<th scope="col" width="100px"></th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody id='tableMatEstudos'>
 			<?php 
 			include('db_contaus.php');
 			$db = new db_contaus;
@@ -271,6 +245,8 @@
             </tbody>
         </table>
 	</section>
+	<script>
+	</script>
 	<footer class="footer">
 		<ul>
 			<li>item 1</li>

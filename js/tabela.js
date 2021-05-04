@@ -5,6 +5,7 @@ $(document).ready(function(){
 			"display":"none",
 			"z-index":"-10"
 		})
+		valueIdTable()
 	})
 	$(".itemPrinci").on('click',function(){
 		if ($(this).next().css('visibility') == "hidden") {
@@ -26,6 +27,7 @@ $(document).ready(function(){
 
 			});
 			$(this).find('i').css('transform','translateY(-50%)');
+			valueIdTable()
 		}
 	});
 	$('#btnAdd').on('click',function(){
@@ -34,6 +36,7 @@ $(document).ready(function(){
 			"display":"block",
 			"z-index":"10"
 		})
+		valueIdTable()
 	})
 });
 
@@ -210,61 +213,182 @@ $.ajax({
 	url:"optionMateria.php",
 	type:"POST",
 	data:{
-		metodo:"pegaLista"
+		metodo:'pegaLista',
+		id:"",
+		materia:"",
+		modulo:""
 	},
 	success:function(data){
+		//console.log(data)
 		var teste = JSON.parse(data)
-		//console.log(teste.length)
 		$(document).ready(function(){
 			$('.tabelaGuia').children().remove();
 			for (var i = 0; i < teste.length; i++) {
 				//console.log(teste)
-				$('.tabelaGuia').append("<tr><td></td><td>"+teste[i].id+"</td><td>"+teste[i].materia+"</td><td>"+teste[i].modulo+"</td><td><i class='material-icons btnTableMat'>mode_edit</i><i class='material-icons btnTableMat'>delete</i></td></tr>");	
+				$('.tabelaGuia').append("<tr><td></td><td class='tabId'>"+teste[i].id+"</td><td class='tabMateria'>"+teste[i].materia+"</td><td class='tabModulo'>"+teste[i].modulo+"</td><td><i class='material-icons btnTableMat'>mode_edit</i><i class='material-icons btnTableMat'>delete</i></td></tr>");
+				$('#sMateria').append("<option value='"+teste[i].materia+"'>"+teste[i].materia+"</option>")
+				$('#tAno').append("<option value='"+teste[i].modulo+"'>"+teste[i].modulo+"</option>")
 			}
 			botaoTabelaSumario()
+			valueId()
+			valueIdTable()
 		})
 
 	}
 })
 function botaoTabelaSumario(){
 	$('.btnTableMat').click(function(){
-		console.log("Inciando")
 		var id = $('.t1').val()
 		var materia = $('.t2').val();
 		var modulo = $('.t3').val();
 		var metodo = $(this).text()												
 		switch (metodo) {
 			case 'Adicionar':
-				(()=>{
-					$.ajax({
-						url:'optionMateria.php',
-						type:'POST',
-						data:{
-							metodo:metodo,
-							id:id,
-							materia:materia,
-							modulo:modulo
-						},
-						success:function(data){
-							console.log(data)
-						}
-					})
-					$('.tabelaGuia').append((()=>{
-						return "<tr><td></td><td>"+id+"</td><td>"+materia+"</td><td>"+modulo+"</td><td><i class='material-icons btnTableMat'>mode_edit</i><i class='material-icons btnTableMat'>delete</i></td></tr>"
-					})())
-			    })();
-				break;
+			(()=>{
+				$.ajax({
+					url:'optionMateria.php',
+					type:'POST',
+					data:{
+						metodo:metodo,
+						id:id,
+						materia:materia,
+						modulo:modulo
+					},
+					success:function(data){
+						//console.log(data)
+					}
+				})
+				$('.tabelaGuia').append((()=>{
+					return "<tr><td></td><td class='tabId'>"+id+"</td><td class='tabMateria'>"+materia+"</td><td class='tabModulo'>"+modulo+"</td><td><i class='material-icons btnTableMat'>mode_edit</i><i class='material-icons btnTableMat'>delete</i></td></tr>"
+				})())
+			})();
+			valueId()
+			valueIdTable()
+			break;
 			case 'delete':
-			    $(this).parents('tr').remove();
-			    break;
+			$(this).parents('tr').remove();
+			var valor = $(this).parents('tr').find('td.tabId').text();
+			//console.log(valor)  
+			$.ajax({
+				url:'optionMateria.php',
+				type:'POST',
+				data:{
+					metodo:metodo,
+					id:valor,
+					materia:materia,
+					modulo:modulo
+				},
+				success:function(data){
+					//console.log(data)
+				}
+			})
+			valueId()
+			valueIdTable()
+			break;
 			case 'mode_edit':
-			    console.log('teste 3')
-			    break;
+			//console.log('teste 3')
+			var objMateria = $(this).parents('tr').find('td.tabMateria')
+			var objModulo = $(this).parents('tr').find('td.tabModulo')
+			var id = $(this).parents('tr').find('td.tabId').text()
+			var materia = $(this).parents('tr').find('td.tabMateria').text()
+			var modulo = $(this).parents('tr').find('td.tabModulo').text()
+			$('input.t1').val(id)
+			$('input.t2').val(materia)
+			$('input.t3').val(modulo)
+			var obj1 = {
+				'id':$('input.t1').val(),
+				'materia':$('input.t2').val(),
+				'modulo':$('input.t3').val(),
+			}
+			$('button#btnAddMat').text('Editar')
+			$('button#btnAddMat').attr('class','btn btn-success btnEditMat')
+			$('.btnEditMat').click(function(){
+				var obj2 = {
+					'id':$('input.t1').val(),
+					'materia':$('input.t2').val(),
+					'modulo':$('input.t3').val(),
+				}
+				//console.log(obj1)
+				//console.log(obj2)
+				var listaSuma1 = Object.entries(obj1);
+				var listaSuma2 = Object.entries(obj2);
+				//console.log(listaSuma1)
+				//console.log(listaSuma2)
+				for (var i = 0; i < listaSuma1.length; i++) {
+					var num1 = listaSuma1[i][1]
+					var num2 = listaSuma2[i][1]
+					if (num1 != num2) {
+						var cabecalho = listaSuma2[i][0]
+						var atual = num2
+						//console.log('Conteudo diferente...')
+						//console.log(cabecalho+":"+atual)
+						$.ajax({
+							url:'optionMateria.php',
+							type:'POST',
+							data:{
+								metodo:metodo,
+								id:id,
+								chave:cabecalho,
+								valor:atual
+							},
+							success:function(data){
+								console.log(data)
+							}
+						})
+						console.log('Atualizar tabela')
+						if(cabecalho == "materia"){											
+							objMateria.text(atual)
+						}else if (cabecalho == "modulo") {							
+							objModulo.text(atual)			
+						}
+					}                   
+				}
+				$('button#btnAddMat').text('Adicionar')
+			    $('button#btnAddMat').attr('class','btn btn-success btnTableMat')
+			   valueId()
+			   valueIdTable()
+			})	
+			break;
 			default:
-				console.log('deu errado')
-				break;
+			console.log('deu errado')
+			break;
 		}
-		console.log('testando')
 	})
 }
 botaoTabelaSumario()
+function valueId(){
+	var obj = $('.tabelaGuia').children();
+	var num = obj.length + 1;
+	$('.t1').val(num);
+}
+function valueIdTable(){
+	var obj = $('#tableMatEstudos').children();
+	var num = obj.length ;
+	$('#tId').val(num);
+}
+valueId()
+function editaSumario(){
+	(()=>{
+		$('.tabelaGuia tr').click(function(){
+			var id = $(this).children('tabId').val();
+			var materia = $(this).children('tabMateria').val();
+			var modulo = $(this).children('tabModulo').val();
+			var tabela = [{
+				"id":id,
+				"materia":materia,
+				"modulo":modulo
+			}];
+			console.log(tabela)
+		})
+	})()
+	// var metodo = "";
+	// switch (metodo) {
+	// 	case label_1:
+	// 		// statements_1
+	// 		break;
+	// 	default:
+	// 		// statements_def
+	// 		break;
+	// }
+}
+editaSumario();
