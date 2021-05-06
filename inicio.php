@@ -110,20 +110,20 @@
 <div class="submenu">
   <?php
 
-  include('db_contaus.php');
-  $x = new db_contaus;
-  $lista = $x->listaAno("matematica");
-  echo "<ul class='listaPrincipal'>";
-  for ($i=0; $i < count($lista); $i++) { 
-   echo "<li><a class='itemPrinci' href='#'>".$lista[$i]."<i class='fa fa-chevron-down'></i></a>";
-   $listaC = $x->listaConteudo($lista[$i],"matematica");
-   echo "<ul class='itemSecun'>";
-   for ($c=0; $c < count($listaC); $c++) { 
-    echo "<li><a href='#' onclick='buscaContMateria()' class='sub-item'>".$listaC[$c]."</a></li>";
-  }
-  echo "</li></ul>";
-}
-echo "</ul>";
+//   include('db_contaus.php');
+//   $x = new db_contaus;
+//   $lista = $x->listaAno("matematica");
+//   echo "<ul class='listaPrincipal'>";
+//   for ($i=0; $i < count($lista); $i++) { 
+//    echo "<li><a class='itemPrinci' href='#'>".$lista[$i]."<i class='fa fa-chevron-down'></i></a>";
+//    $listaC = $x->listaConteudo($lista[$i],"matematica");
+//    echo "<ul class='itemSecun'>";
+//    for ($c=0; $c < count($listaC); $c++) { 
+//     echo "<li><a href='#' onclick='buscaContMateria()' class='sub-item'>".$listaC[$c]."</a></li>";
+//   }
+//   echo "</li></ul>";
+// }
+// echo "</ul>";
 
 ?>
 </div>
