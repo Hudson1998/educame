@@ -90,62 +90,19 @@
 			<button onclick="enviaDados()" type="button" id="botaoAdiciona" class="btn btn-primary">Adicionar</button>
 	</form>
   </div>
- <nav id="navegacao">
+  <nav id="navegacao">
     <ul class="nav-rigth">
      <li title="home">
-      <a href="inicio.php">
+      <a class="topHeader" href="inicio.php">
        <span class="material-icons-outlined">
          home
        </span>
      </a>
    </li>
-   <li title="Tabela">
-    <a href="tabela.php">
-      <span class="material-icons-outlined">
-        dashboard_customize
-      </span>
-    </a>
-  </li>
-  <li class="ensinoMedio" title="Ensino Básico">
-   <span class="material-icons-outlined">
-     library_books
-   </span>
-   <span class="material-icons-outlined seta-estudos">
-     arrow_drop_down
-   </span>
-   <ul class="ensinoMedio">
-    <li class="materiaSelect"><a class="item" href="#">Matematica</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Português</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Historia</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Geografia</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Filosofia</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Química</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Física</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Sociologia</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Artes</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Inglês</a></li>
-    <li class="materiaSelect"><a class="item" href="#">Ed.Física</a></li>
-  </ul>
-</li>
-<li class="cursos" title="cursos">
-  <span class="material-icons-outlined">
-    library_books
-  </span>
-  <span class="material-icons-outlined seta-cursos">
-    arrow_drop_down
-  </span>
-  <ul class="cursos">
-  </ul>
-</li>
-<li title="Notificação">
-  <span class="material-icons-outlined">
-    notifications
-  </span>
-</li>
 <li title="Configuração">
-  <a class="setting" href="#">
+  <a class="setting topHeader" href="#">
     <span class="material-icons-outlined">
-     settings
+     logout
    </span>
  </a>
  <ul class="config">
@@ -156,10 +113,10 @@
 </li>
 </ul>
 <!-- icone de menu antes da logo que aparece na funcao de responsivo -->
-<span class="material-icons-outlined menu">
+<span id="menu" class="material-icons-outlined menu">
  menu
 </span>
-<a class="logoTipo" onclick="temaMuda()" href="#"><span class="logoE">E</span> <span class="nomePrinci">Education</span></a>
+<a class="logoTipo" href="#"><span class="logoE">E</span> <span class="nomePrinci">Educa+</span></a>
 
 <input id="search" type="text" placeholder="Matematica...">
 <span id="lupa" class="material-icons-outlined">
@@ -247,15 +204,57 @@
 	</section>
 	<script>
 	</script>
-	<footer class="footer">
-		<ul>
-			<li>item 1</li>
-			<li>item 1</li>
-			<li>item 1</li>
-			<li>item 1</li>
-			<li>item 1</li>
-		</ul>
-	</footer>
+<footer class="footer">
+    <div class="copyFooter">
+    <span class="material-icons-outlined copyIcon">
+      copyright
+    </span>
+    2021 by educamais.com.br
+  </div>
+  <div class="listasFooter">
+    <ul class="listaPrinciF">
+      <li class="tituloF"><span><span class="logoE" style="color: #8C47DA">E</span>Educa+</span>
+        <hr>
+        <ul>
+          <li>Privacidade</li>
+          <li>Termos de serviços</li>
+          <li>Objetivo do site</li>
+          <li>Dados enviados</li>
+          <li>Criptografia</li>
+        </ul>
+      </li>
+      <li class="tituloF"><span>Desenvolvimento</span>
+        <hr>
+        <ul>
+          <li>Design</li>
+          <li>Planejamento</li>
+          <li>Front-End</li>
+          <li>Tenologias Usadas</li>
+          <li>Sugestões</li>
+          <li>Segurança</li>
+        </ul>
+      </li>
+      <li class="tituloF"><span>Ajuda</span>
+        <hr>
+        <ul>
+          <li>Fraude</li>
+          <li>Dados Roubados</li>
+          <li>Propagandas abusivas</li>
+          <li>Ofensas online</li>
+          <li>Ameaças</li>
+        </ul>
+      </li>
+      <li class="tituloF"><span>Contato</span>
+        <hr>
+        <ul>
+          <li>Email: <a href="#">educa+@gmail.com</a></li>
+          <li>Tel: <a href="#">(31)98316-0515</a></li>
+          <li>Cep: <a href="#">32341-420</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</footer>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 	<script>	
 	</script>

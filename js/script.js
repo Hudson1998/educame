@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	submenuEvent()
 	$('form img').on('click',function(){
 		$('.menu-popup').css({
 			"position":"relative",
@@ -7,17 +8,37 @@ $(document).ready(function(){
 		})
 	})
 	temaInicial()
+	
 })
+function submenuEvent(){
+	$('.menu').click(function(){
+		mudaTema()
+		var estado = $('div.submenu').css('display')
+		if (estado == "none") {
+			$('.submenu').css('width','15%')
+			$('.submenu').css('display','block')
+			$('section').css('width','85%')	
+			mudaTema()		
+		}else{
+			$('.submenu').css('width','0%')
+			$('.submenu').css('display','')
+			$('section').css('width','100%')
+		}
+	})
+}
+submenuEvent()
 function eventSubMenu(){
-		$('section,.submenu').click(function(){
-			fechaSubmenu()
-		})	
-	}
+	$('section,.submenu').click(function(){
+		fechaSubmenu()
+		
+	})	
+}
 temaInicial()
 function listaEfeito(){
 	$(document).ready(function(){
 		$(".itemPrinci").on('click',function(){
 			mudaTema()
+			
 			if ($(this).next().css('visibility') == "hidden") {
 				$(this).next().css({
 					"height": "auto",
@@ -61,6 +82,7 @@ $(document).ready(function(){
 					listaEfeito()
 					buscaContMateria()
 					temaSelect()
+					
 				}
 			}
 		})
@@ -71,6 +93,7 @@ function buscaContMateria(){
 		$('.sub-item').click(function(){
 			mudaTema()
 			temaSelect()
+			
 			var conteudo = $(this).text()
 			console.log(conteudo)
 			$.ajax({
@@ -84,6 +107,7 @@ function buscaContMateria(){
 					$('section').children().remove();
 					$('section').append(response);
 					mudaTema()
+					
 				}
 			})
 		})
@@ -93,6 +117,7 @@ function abreMenu(){
 	$(document).ready(function(){
 		$('li.ensinoMedio').click(function(){
 			mudaTema()
+			
 			var resposta = $(this).children('ul.ensinoMedio').css('display');
 			//console.log(resposta)
 			if (resposta != "block") {
@@ -102,9 +127,11 @@ function abreMenu(){
 			}else{
 				$('ul.ensinoMedio').css('display','none')
 				eventSubMenu()
+				
 			}
 		})
 		$('.setting').click(function(){
+			
 			var resposta = $('.config').css('display');
 			//console.log(resposta)
 			if (resposta != "block") {
@@ -114,10 +141,12 @@ function abreMenu(){
 			}else{
 				$('ul.config').css('display','none')
 				eventSubMenu()
+				
 			}
 		})
 		$('li.cursos').click(function(){
 			mudaTema()
+			
 			var resposta = $(this).children('ul.cursos').css('display');
 			//console.log(resposta)
 			if (resposta != "block") {
@@ -127,6 +156,7 @@ function abreMenu(){
 			}else{
 				$('ul.cursos').css('display','none')
 				eventSubMenu()
+				
 			}
 		})
 	})
@@ -135,10 +165,11 @@ function fechaSubmenu(){
 	$('ul.cursos').css('display','none')
 	$('ul.config').css('display','none')
 	$('ul.ensinoMedio').css('display','none')
-
+	
 }
 abreMenu()
 function mudaTema(){
+	
 	$(document).ready(function(){
 		$('#tema').click(function(){
 			console.log('deu certo, foi clicado')
@@ -162,6 +193,7 @@ function mudaTema(){
 	})
 }
 function temaSelect(){
+	
 	var togg = $("#toggle").text();
 	if (togg == 'toggle_on') {
 		$('body').css('background','#202124')
@@ -178,7 +210,9 @@ function temaSelect(){
 	}
 }
 mudaTema()
+
 function temaInicial(){
+	
 	$('body').css('background','#202124')
 	$('section').css('color','rgba(255,255,255,0.6)')
 	$('.submenu').css('background','#2e2e2e')
@@ -203,3 +237,4 @@ $.ajax({
 		}
 	}   
 })
+

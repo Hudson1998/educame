@@ -15,10 +15,9 @@ section{
 }
 .material-icons{
 	color: #A4A4A4;
-	font-size: 18px;
+	font-size: 19px;
 	margin-left: 15px
 }
-
 .material-icons:hover{
 	cursor: pointer;
 	color: #6F5AEC

@@ -13,26 +13,28 @@ body{
 }
 .menu{
   position: relative;
-  left: 0px;
+  left: 7px;
   top: 50%;
   transform: translate(0%,-50%);
   color: #EDEDED;
-  font-size: 45px;
-  display: none;
+  font-size: 30px;
+}
+.menu:hover{
+  cursor: pointer;
 }
 .logoTipo{
   position: absolute;
   top: 50%;
   transform: translate(0%,-50%);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 15px;
   padding-left: 20px;
 }
 .logoE{
   color: #6B68E2;
   border:2px solid #6B68E2;
   position: relative;
-  padding:1px 12px 3px 12px;
+  padding:1px 10px 3px 10px;
   margin-right: 7px;
 }
 .nomePrinci{
@@ -42,16 +44,16 @@ body{
 }
 #lupa{
   position: absolute;
-  color: #C7C4C4;
+  color: #787878;
   font-size: 25px;
   width: 0px;
   top: 50%;
   transform: translate(0%,-50%);
-  left: 25.5%;
+  left: 28.0%;
 }
 #search{
   position: absolute;
-  width: 30%;
+  width: 25%;
   background: rgba(255,255,255,.1);
   top: 50%;
   left: 40%;
@@ -62,7 +64,7 @@ body{
   padding-left: 38px;
   color: #fff;
   font-family: 'Poppins';
-
+  font-size: 13px;
 }
 #search:focus{
   outline: none;
@@ -70,14 +72,27 @@ body{
 }
 .nav-rigth{
   position: absolute;
-  right: 20px;
+  right: 5%;
   top: 50%;
   transform: translate(0%,-50%);
   list-style: none;
 }
 .nav-rigth li{
   display: inline-block;
-  width: 50px
+  width: 60px;
+  border:none;
+}
+.nav-rigth li .topHeader{
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-family: 'poppins';
+  padding-bottom: 5px;
+  font-size: 14px;
+  text-align: ;
+}
+.nav-rigth li a:hover{
+  color: #929292
 }
 .nav-rigth .material-icons-outlined{
   color: #EDEDED;
@@ -100,16 +115,16 @@ ul li:hover .material-icons-outlined{
 }
 /* editando o submenu superior */
 #navegacao ul ul{
-  display: block;
+  display: static;
   position: absolute;
-  margin-top: 14px;
+  margin-top: 17px;
   width: 300px;
-  right: 20px;
+  right: 10px;
   border: none;
   display: none;
+  box-sizing: border-box;
 }
 #navegacao ul ul li{
-  position: relative;
   display: block;
   width: 100%;   
   color: #fff;
@@ -127,17 +142,10 @@ ul li:hover .material-icons-outlined{
   line-height:40px;
   text-decoration: none;
   padding-left: 20px;
-  border: none;
   margin: 0;
-  background: #D3D3D3;
-  color: #2C2C2C;
+  background: #2C2C2C;
+  color: #9E9E9E;
   font-family: 'Poppins'
-}
-.linha hr{
-  position: absolute;
-  left: 0;
-  width: 100%;
-  border-bottom: 1px solid #B6B6B6;
 }
 #navegacao ul ul li:hover .item{
   background: #4040FC;
@@ -176,7 +184,7 @@ section h1, h2{
 section{
   margin-top: 64px;
   display: inline-block;
-  width: 85%;
+  width: 100%;
   float: right;
   padding:50px;
   text-align: justify;
@@ -248,11 +256,11 @@ section h1, h2{
 /*---------------------------------------------------*/
 .submenu{
   position: fixed;
-  width: 15%;
+  width: 0%;
+  display: none;
   padding-top: 56px;
   height: 100%;
   background-color: #EBEBEB;
-  display: block;
   box-sizing: border-box;
   color: #575757;
   font-size: 13px;
@@ -322,15 +330,6 @@ section h1, h2{
   color: #fff;
   border-left:2px solid #345AFF;
 }
-
-/*---------------------Footer--------------------------*/
-footer{
-  width: 100%;
-  height: 500px;
-  display: flex;
-  bottom: 0;
-  background-color: #1a1919;
-}
 /*--------barra de rolagem----------------------*/
 .submenu::-webkit-scrollbar {
   width: 10px;
@@ -359,4 +358,86 @@ footer{
 .nav-link{
   font-size: 14px;
   color: #fff
+}
+footer .listasFooter{
+  position: absolute;
+  display: inline-block;
+  float: top;
+  width: 80%;
+  height: 370px;
+  /*background:#343434;*/
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%,0%);
+  box-sizing: border-box;
+}
+footer .copyFooter{
+  position: absolute;
+  top: 90%;
+  width: 80%;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%,0%);
+  text-align: center;
+   color: #919191;
+}
+.copyIcon{
+  vertical-align: -6px;
+}
+footer .listaPrinciF{
+  position: absolute;
+  display: flex;
+  /*background: red;*/
+  padding: 0;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  
+}
+footer ul ul{
+  position: relative;
+  top: 0%;
+ /* left: -10%;*/
+  transform: translate(0%,0%);
+  display: inline-block;
+  padding: 0;
+}
+footer .tituloF{
+  position: relative;
+  display: inline-block;
+  /*background: yellow;*/
+  margin-right: 50px;
+  box-sizing: border-box;
+  width: 250px;
+}
+footer .tituloF span{
+  color: #fff;
+  font-size: 17px;
+}
+footer ul li li{
+  display: block;
+  margin: 0;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%,-0%);
+  margin-top: 10px;
+  width: auto;
+}
+footer hr{
+  margin: 7px 0px 7px 0px;
+}
+footer{
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 500px;
+  display:flex;
+  bottom: 0;
+  float: right;
+  background-color: #1a1919;
+  z-index: -2;
+  color: #B0B0B0;
+  font-family: 'poppins';
+  font-size: 15px;
 }
