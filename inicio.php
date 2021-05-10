@@ -134,8 +134,8 @@
   ?>
 </div>
 <section style="float: right;display: inline">
-  <h1>Bem vindo ao Educame</h1>
-  <hr style="margin-bottom: 10px;">  
+  <h1>Bem vindo ao educame</h1>
+  <hr>  
   <h2>O melhor site de estudos</h2>
   <p> 
     O melhor site para pesquisas rapidas e bem estruturadas. A educame desenvolveo um site com

@@ -17,12 +17,14 @@ function submenuEvent(){
 		if (estado == "none") {
 			$('.submenu').css('width','15%')
 			$('.submenu').css('display','block')
-			$('section').css('width','85%')	
+			$('section').css('width','85%')
+			$('footer').css('width','85%')
 			mudaTema()		
 		}else{
 			$('.submenu').css('width','0%')
 			$('.submenu').css('display','')
 			$('section').css('width','100%')
+			$('footer').css('width','100%')
 		}
 	})
 }

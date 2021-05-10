@@ -91,19 +91,15 @@
 	</form>
   </div>
   <nav id="navegacao">
-    <ul class="nav-rigth">
-     <li title="home">
-      <a class="topHeader" href="inicio.php">
-       <span class="material-icons-outlined">
-         home
-       </span>
+    <ul class="nav-rigth nav-tabela">
+     <li  class="homeTable" title="home">
+      <a class="topHeader tabela-home-icon" href="inicio.php">
+       Home
      </a>
    </li>
 <li title="Configuração">
   <a class="setting topHeader" href="#">
-    <span class="material-icons-outlined">
-     logout
-   </span>
+    Sobre
  </a>
  <ul class="config">
    <li class="materiaSelect"><a id="tema" href="#">Tema Escuro: <span id="toggle" class="material-icons-outlined">
@@ -116,20 +112,36 @@
 <span id="menu" class="material-icons-outlined menu">
  menu
 </span>
-<a class="logoTipo" href="#"><span class="logoE">E</span> <span class="nomePrinci">Educa+</span></a>
-
-<input id="search" type="text" placeholder="Matematica...">
-<span id="lupa" class="material-icons-outlined">
-  search
-</span>
+<a class="logoTipo" href="#">
+	<span class="logoE">E</span> 
+	<span class="nomePrinci">Educa+</span>
+</a>
 </nav>
+<div class="submenu">
+  <?php
+
+//   include('db_contaus.php');
+//   $x = new db_contaus;
+//   $lista = $x->listaAno("matematica");
+//   echo "<ul class='listaPrincipal'>";
+//   for ($i=0; $i < count($lista); $i++) { 
+//    echo "<li><a class='itemPrinci' href='#'>".$lista[$i]."<i class='fa fa-chevron-down'></i></a>";
+//    $listaC = $x->listaConteudo($lista[$i],"matematica");
+//    echo "<ul class='itemSecun'>";
+//    for ($c=0; $c < count($listaC); $c++) { 
+//     echo "<li><a href='#' onclick='buscaContMateria()' class='sub-item'>".$listaC[$c]."</a></li>";
+//   }
+//   echo "</li></ul>";
+// }
+// echo "</ul>";
+
+  ?>
+</div>
 	<section style="float: right;display: inline">
 		<!-- tabela de sumario -->
-		<h1 class="title">Tabela de Estudos</h1>
-		<hr>
-		<h4>Abaixo a tabela de informações do sistema</h4>
+		<h4>Tabela de informações do sistema</h4>
 		<button id="btnAdd" type="button" class="btn btn-primary">Adicionar</button>
-	<table class="table table-hover table-dark">
+	<table class="table table-hover table-dark tabelaSistema">
 		<thead>
 			<tr>
 				<th scope="col"></th>
@@ -157,9 +169,7 @@
 				?>
 		</tbody>
 	</table>
-	<h1 class="title">Tabela Sumário</h1>
-	<hr>
-	<h4>Veja as informações na tabela sumário</h4>
+	<h4>Tabela Sumário</h4>
 	<button id="btnAddMat" type="button" class="btn btn-success btnTableMat">Adicionar</button>
 	<table class="table table-hover table-dark">
         <thead>
